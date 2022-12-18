@@ -8,5 +8,4 @@ workflows:
       node: latest
     scripts:
       - npm install
-    artifacts:
   
