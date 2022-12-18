@@ -6,9 +6,6 @@ workflows:
         integrations:
           app_store_connect: codemagic
         environment:
-          ios_signing:
-            distribution_type: app_store
-            bundle_identifier: io.codemagic.sample.reactnative
           vars:
             XCODE_WORKSPACE: "VisionCameraExample.xcworkspace" # <-- Put the name of your Xcode workspace here
             XCODE_SCHEME: "CodemagicSample" # <-- Put the name of your Xcode scheme here
