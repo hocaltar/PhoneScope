@@ -1,6 +1,6 @@
 workflows:
   react-native:
-    name: React Native App
+    name: React Native App2
     environment:
       vars: 
         XCODE_WORKSPACE: "{{A}}"
