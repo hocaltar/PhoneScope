@@ -3,8 +3,6 @@ workflows:
         name: React Native iOS
         max_build_duration: 120
         instance_type: mac_mini_m1
-        integrations:
-          app_store_connect: codemagic
         environment:
           vars:
             XCODE_WORKSPACE: "VisionCameraExample.xcworkspace" # <-- Put the name of your Xcode workspace here
