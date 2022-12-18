@@ -84,6 +84,10 @@ buildscript {
     // noinspection DifferentKotlinGradleVersion
     classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     classpath "org.jetbrains.kotlin:kotlin-android-extensions:$kotlin_version"
+
+    //new new
+    
+
   }
 }
 
@@ -160,12 +164,16 @@ android {
       }
     }
   }
-
+  //ndk {
+  // abiFilters 'armeabi-v7a', 'x86'
+  //}
   packagingOptions {
     // Exclude all Libraries that are already present in the user's app (through React Native or by him installing REA)
     excludes = ["**/libc++_shared.so", "**/libfbjni.so", "**/libjsi.so", "**/libreactnativejni.so", "**/libfolly_json.so", "**/libreanimated.so", "**/libjscexecutor.so", "**/libhermes.so", "**/libfolly_runtime.so"]
     // META-INF is duplicate by CameraX.
     exclude "META-INF/**"
+    pickFirst '**/libjsc.so'
+    pickFirst '**/libc++_shared.so'
   }
 
   buildTypes {
