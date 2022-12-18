@@ -10,14 +10,10 @@ workflows:
             APP_ID: 1555555551 # <-- Put the app id number here. This is found in App Store Connect > App > General > App Information
           node: v16.11.1
           xcode: latest
-          cocoapods: default
         scripts:
             - name: Install npm dependencies
               script: |
                 npm install
-            - name: Install CocoaPods dependencies
-              script: |
-                cd ios && pod install
             - name: Set Info.plist values
               script: |
                 # This allows publishing without manually answering the question about encryption 
